@@ -24,7 +24,7 @@ namespace ASP.NetCoreProtobuf.Formatters {
       JsonParser.Settings settings = new JsonParser.Settings(100);
       JsonParser parser = new JsonParser(settings);
 
-      using(TextReader reader = new StreamReader(request.Body, encoding)) {
+      using (TextReader reader = new StreamReader(request.Body, encoding)) {
         protoType = parser.Parse(reader, protoType.Descriptor);
       }
 
